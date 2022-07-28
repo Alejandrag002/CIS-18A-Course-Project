@@ -1,0 +1,439 @@
+Interface: 
+Service.java
+
+  Beginning interface Service 
+{
+    public double go get the cost of the cake();
+
+    public void to set the cost of the double cost();
+
+    public String to get the name of the cake(); 
+
+    public void set name to set the name of service to name variable();
+} 
+End of interface Service
+
+
+Interface: 
+Order.java
+
+Beginning interface Order
+{
+	  public void set date selected by the customer();
+
+	    public String to get the the date();
+
+	    public void to set the customers name(variable string);
+	    public String to get the customers name();
+
+	    public double to get the total cost of the cake and toppings();
+
+	    public void to set the total cost (to variable double total cost);
+}
+End of interface Order
+
+
+
+
+
+
+
+Cake.java
+
+Beginning of class CakeOrder which will implements the interface Order 
+{
+    Make cake array [] from CakeService array
+   set service index to 0
+    Create extra toppings array [] from CakeService array
+    Create int service in and set to 0 as well 
+
+    declare variables from the interface order
+
+    DateTimeFormatter to the date format of month,day,year,time
+ 
+    Declare variable for datetimeformatter - delivery days, when it opened, hours opened
+
+    make a String time array[] = new String [days * number of hours opened/ available for         
+    Delivery] 
+
+    time array index to 0;
+
+
+    
+    Method to generate available delivery dates
+{
+                Create for loop 
+   {
+          // have to set 
+                         set local date time today variable to USA time or California time?;
+                         set local date time today time variable to today, midnight;
+                         set local date time tomorrow time variable to time variable for today;
+ 
+                                	Create for loop 
+{
+                                            	date to =  tomorrow time variable in addition plus hours from the 
+                                                dateformat
+                                                need time array[time array index(from above)] = date format
+                                            	need to increasing index++
+                                	}
+                                   
+                    	}return this time array to later ask for customer input on delivery day
+    }
+
+	    
+ method to  add toppings to (cake service service) 
+{
+                 cake [service index] = the service
+                    	Increasing Service Index++
+        	}
+ 
+ method to add  an extra topping to (cake service service) 
+          {
+                    	Extra toppings [service index] = the service
+                    	Increasing Service Index++
+        	}
+           
+            Methods and return for the interface service 
+
+to get the month 
+{
+                    	return the month the customer entered
+        	}
+ 
+        	to set month 
+{
+                    	the month customer entered = month variable
+        	}
+ 
+to get the day 
+{
+                    	return the day customer entered
+        	}
+ 
+        	to set day 
+{
+                    	the day customer entered = day variable
+        	}
+ 
+        	 to get the date 
+{
+                    	return the date customer selected
+        	}
+ 
+        	to set date
+{
+                    	the date customer selected = day variable
+        	}
+ 
+        	to get the name of the customer//name on order
+{
+                    	return the name of the customer they entered
+        	}
+ 
+        	to set the name of the customer 
+{
+                    	the name of customer entered  =  customer name  variable
+        	}
+
+
+    Method to get the total cost of the customer's order () 
+{
+                    	 total variable = 0
+ 
+                    	// for -loop through all cakes they entered to get the cost of each
+                    	for (int i = 0; i <= the Service index -1; increasing each loop) 
+{
+                    	        	Add cake cost with method get cost to total cost
+                    	}
+ 
+                    	// for-loop through all the extra toppings they entered to get the cost of each
+                    	for (int i = 0; i <=extra Service index -1; i++)
+ {
+                    	        	Add extra toppings price with method get cost to total cost
+                    	}
+                       
+        	    return total
+        	}
+
+
+ 
+Method in order to set total cost
+ {
+                 This total cost = total cost variable;
+ }
+
+    
+Method to print the services()
+ {
+           
+           decimal format for prices to use in the menu
+           
+        	Println  “Here is your receipt! Thank You”
+        	Println a line break
+        	Println  “Ale's Cake Service”
+        	Println   “Order for: " + customer name variable”
+Println “Cake Delivery Date: " + call get date”
+
+for (loop through the service index until we get to the service they chose)
+{
+        	Println “ Cake: " + call service get name we pulled from loop
+}
+
+ for (loop through the extra topping index until we get to the extra topping they chose) 
+{
+
+Println  “Toppings selected: " + call extra toppings get name we pulled from loop
+
+            }
+Println “Todays Total: $" + df.format(call get total cost) + “
+
+        	data += "Cake Delivery";
+        	data += "Cake for: " + customer name + "\r\n" + "Cake Delivery: " + delivery date 
+
+for (loop through the service index until we get to the cake they chose) 
+{
+        	Println “ cake: " + get name we pulled from loop
+}
+for (loop through the extra toppings index until we get to the extra toppings they chose) 
+{
+Println “toppings : " + call extra toppings get name we pulled from loop
+}
+
+
+Beginnings of  class CakeService implementing the service interface
+{
+         
+have to declare variables from interface Service
+        	Variable for cost of service 
+        	 variable for name of service
+ 
+Cakeservice(name of cake variabel, cost of cake variable)
+ {
+
+        		declare this set Cost as cost of service variable
+        		declare this set Name as name of service variable;
+}
+              
+            //methods
+             to get the cost of cake 
+           {
+                    	return this cost of cake
+        	}
+ 
+        	to set cost 
+{
+                    	this cost  = cost of cake variable
+        	}
+ 
+        	to get the cake name  
+{
+                    	return this cake name
+        	}
+ 
+        	to set cake name
+ {
+                    	cake name = name of cake variable
+        	}
+ 
+}  
+     
+
+Beginning of class cakes
+{
+ 
+Create decimal format for cake prices
+Create new cakeservice array for the 5 cakes
+Create newextra toppings array for the 2 toppings 
+
+
+// constructor for cakes class instance creation
+ {
+ 	
+	// here the cakes and their prices are stored 
+	// it will loop and find the cak eof customer then print name of cake and price
+        	
+           //EXAMPLE
+        	this.cake[0] = a new CakeService (“single tier”, 20.00) //fill all 5 slots with different  
+cakes
+         
+
+        	// for the extra toppings(same thing)
+        	This.extraToppings[0] = new CakeService(“tier”, 20.00)
+           
+             startOrder
+}
+
+
+
+method showCakes prints out all cake options 
+{
+ 
+forloop ( the length of the cake print the following) 
+{
+        		Println “Option " + i + " " + get name for cake selected  + "  $" + format the 
+cake cost
+             }
+           
+        		Println "Toppings"
+
+for (the length of the extra toppings print the following) 
+{
+      
+       		Println "Option " + i + " " + get name for extra toppings selected + "$" +
+format the  extra toppings cost
+
+    	}
+        		Println  "select cake "
+ 
+} 
+
+
+   Method showextratoppings toppings to order
+ {
+        	for(length of extra toppings)
+ {
+                   Println"Option " + i + " " + get name for extra topping selected + "	$" + 
+       format the  extras topping cost
+        	}
+ 
+}
+
+  Method startOrder 
+{
+ 
+        	Cake order = a new cake order
+ 
+Println "Welcome to bakery "
+ 
+Println "We are open everyday from11 AM to 6pm"
+
+Println “ckaes we offer”
+
+Then showCakes()
+
+           Scanner object from System.in for option (integer)
+ 
+Validate
+ 
+If ( option is <0 or bigger than 2)
+ {
+do 
+{ 
+Println  “+ option + " i not a valid option. select from the following: "
+ 
+showCakes()
+ 
+Create new option for input
+                    	} 
+
+while (options is <0 or >5)
+{
+ 
+                    	Print Prompt "You selected option: " + option
+		}
+ 
+} 
+ 
+Add valid topping to the order 
+Println "\Toppings (Yes or No)"
+
+
+} END  ( add extra service equals yes or Yes)
+ 
+If (Yes) 
+{
+ 
+Call showextratopping to print out  
+Create new int variable for topping selected
+ 
+Validate
+if( new in variable equals 0 or equals 1) 
+{
+                    	Create switch (new int variable)
+		{
+ 
+                                	Case 0:
+                                	Println "Topping tier"
+                              
+                       
+                                	Case 1:
+                                	Println "topping __”
+}
+ 
+} 
+else
+ {
+        	do 
+{
+                    	Println “ topping variable+ " not a valid select from 
+the following: ");
+              	Call  showExtratoppings
+        		Create new int for their topping 
+        	} 
+loop while (new in variable is <0 or >1)
+}
+ 
+Add the extra topping to order.add
+ 
+} 
+else if (new int variable equals No) 
+{
+        	Println ("No Topping");
+ 
+} 
+else 
+{
+        	Invalid user input
+        	Print Prompt "Invalid type “Yes” or “No"
+ 
+}
+
+Reset
+ 
+        	Println "name for order:"
+ 
+        	new string for customer name
+
+        	new string for customer name to the variable for customer name 
+
+
+        	//get dates
+   	  String[] dateOptions = order.generateDates();
+           
+Println "Select a date option below: "
+ 
+// prints out options
+   for (int dateIndex = 0; dateIndex < dateOptions.length; dateIndex++) 
+{
+        	Println System.out.println(dateIndex + ") " + dateOptions[dateIndex]);
+    	}
+
+int variable for fate customer picked
+ 
+do 
+{
+        	Variable for customer date  next line
+}
+While loop (variable they picked for date  > dateOptions length or <0)
+ 
+save variable for delivery (order.setDate)
+ 
+order.printServices()
+ 
+} END of start Order
+
+
+}// end of cakes class
+
+class Main 
+{
+    public static void main(String[] args) 
+    {
+        cakes testService = new cakes();
+
+    }
+}
+
+
+
+
